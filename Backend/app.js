@@ -9,13 +9,7 @@ const procurementListRoutes = require("./routes/procurementListRoutes");
 //modules in backend server
 const errorHandler = require("./utils/errorHandler");
 
-const allowedOrigins = ['https://frontend-5sqx.onrender.com'];
 
-const options = {
-  origin: allowedOrigins,
-  methods: 'GET,POST,PUT,DELETE',
-  credentials: true, // Enable cookies or authorization headers if needed
-};
 
 dotenv.config();
 
@@ -33,7 +27,7 @@ const connectToDatabase = async()=>{
  connectToDatabase();
  const app = express();
  app.use(express.json());
- app.use(cors(options));
+ app.use(cors());
  app.use("/api/users", userRoutes);
  app.use("/api/procurement", procurementListRoutes);
 
