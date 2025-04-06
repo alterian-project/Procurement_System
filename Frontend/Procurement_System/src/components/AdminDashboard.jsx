@@ -22,7 +22,7 @@ const ManageProcurement = () => {
 
       try {
         const response = await fetch(
-          "http://localhost:3001/api/procurement/get-all-procurement-list", {
+          "https://procurement-system-ufbe.onrender.com/api/procurement/get-all-procurement-list", {
             method: "GET",
             headers: { Authorization: `Bearer ${token}` }
           }
@@ -54,7 +54,7 @@ const ManageProcurement = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:3001/api/procurement/get-procurement-list/${procurementId}`,
+        `https://procurement-system-ufbe.onrender.com/api/procurement/get-procurement-list/${procurementId}`,
         {
           method: "GET",
           headers: { Authorization: `Bearer ${token}` }
@@ -77,7 +77,7 @@ const ManageProcurement = () => {
   const handleExport = async (procurementId) => {
     try {
       const response = await fetch(
-        `http://localhost:3001/api/procurement/get-procurement-list/${procurementId}`
+        `https://procurement-system-ufbe.onrender.com/api/procurement/get-procurement-list/${procurementId}`
       );
       const data = await response.json();
 
