@@ -20,7 +20,7 @@ const ProcurementList = () => {
 
             try {
                 const response = await fetch(
-                    `http://localhost:3001/api/procurement/get-all-procurement-list-user`,
+                    `https://procurement-system-ufbe.onrender.com/api/procurement/get-all-procurement-list-user`,
                     {
                         method: "GET",
                         headers: {
